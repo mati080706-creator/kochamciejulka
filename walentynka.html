@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Kocham cię julka</title>
+    <link rel="icon" type="image/x-icon" href="serce.png">
+</head>
+<body>
+    <div id="misiek">
+        <img src="misiek.gif" alt="">
+    </div>
+    <h1>Zostaniesz moją walentynką?💘</h1>
+    <main>
+        <a href="zgodzilasie.html"><button id="tak" type="button">TAK</button></a>
+        <button id="nie" type="button" onclick="niezgodzilasie()">NIE</button>
+    </main>
+</body> </a>
+</html>
+<script>
+  let scale = 1;
+  let index = 0;
+
+  const tekstyNie = [
+    "No weź🥺",
+    "Pomyśl o plusach🫣",
+    "No i czemu tak robisz???😐",
+    "Proszę zastanów się🤨",
+    "No weź pomyśl o tym🥺",
+    "Zaraz nie będzie powrotu☹️",
+    "No kliknij  wreszcie TAK 😍",
+  ];
+
+  function niezgodzilasie() {
+    const tak = document.getElementById("tak");
+    const nie = document.getElementById("nie");
+
+    // powiększanie TAK
+    scale += 0.6;
+    tak.style.transform = `scale(${scale})`;
+
+    // zmiana napisu na NIE
+    nie.textContent = tekstyNie[index];
+    index++;
+
+    if (index >= tekstyNie.length) {
+      index = tekstyNie.length - 1;
+    }
+  }
+</script>
+<style>
+body{
+    background-color: rgb(242, 228, 241);
+    font-family: Arial, Helvetica, sans-serif
+}
+h1{
+    color: rgb(198, 80, 190);
+}
+#misiek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%; 
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 300px;
+    
+}
+#tak{
+    padding: 10px 50px;
+    background-color: rgb(0, 255, 55);
+    border: 5px, rgb(0, 230, 20), solid;
+    border-radius: 30px;
+    color: rgb(2, 127, 12);
+    font-size: x-large;
+    
+}
+#nie{
+    padding: 10px 50px;
+    background-color: rgb(255, 0, 0);
+    border: 5px, rgb(230, 0, 20), solid;
+    border-radius: 30px;
+    color: rgb(138, 0, 11);
+    font-size: x-large;
+}
+</style>
